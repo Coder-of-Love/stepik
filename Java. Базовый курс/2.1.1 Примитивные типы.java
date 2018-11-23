@@ -1,8 +1,8 @@
-/*
-Реализуйте метод, возвращающий true, если среди четырех его аргументов ровно два истинны (любые). Во всех остальных случаях метод должен возвращать false.
+п»ї/*
+Р РµР°Р»РёР·СѓР№С‚Рµ РјРµС‚РѕРґ, РІРѕР·РІСЂР°С‰Р°СЋС‰РёР№ true, РµСЃР»Рё СЃСЂРµРґРё С‡РµС‚С‹СЂРµС… РµРіРѕ Р°СЂРіСѓРјРµРЅС‚РѕРІ СЂРѕРІРЅРѕ РґРІР° РёСЃС‚РёРЅРЅС‹ (Р»СЋР±С‹Рµ). Р’Рѕ РІСЃРµС… РѕСЃС‚Р°Р»СЊРЅС‹С… СЃР»СѓС‡Р°СЏС… РјРµС‚РѕРґ РґРѕР»Р¶РµРЅ РІРѕР·РІСЂР°С‰Р°С‚СЊ false.
 */
 
-//мое
+//РјРѕРµ
 public static boolean booleanExpression(boolean a, boolean b, boolean c, boolean d) {
     return 
         (a & b & !c & !d) 
@@ -19,22 +19,22 @@ public static boolean booleanExpression(boolean a, boolean b, boolean c, boolean
         ;
 }
 
-//чужое, через ТИ
+//С‡СѓР¶РѕРµ, С‡РµСЂРµР· РўР
 public static boolean booleanExpression(boolean a, boolean b, boolean c, boolean d) {
     return ((a != b) && (c != d)) || ((a != c) && (b != d));
 }
 
-//чужое, через сумму истинностей
+//С‡СѓР¶РѕРµ, С‡РµСЂРµР· СЃСѓРјРјСѓ РёСЃС‚РёРЅРЅРѕСЃС‚РµР№
 public static boolean booleanExpression(boolean a, boolean b, boolean c, boolean d) {
     return ((a?1:0) + (b?1:0) + (c?1:0) + (d?1:0)) == 2;
 }
 
-//чужое, через побитовые операторы
+//С‡СѓР¶РѕРµ, С‡РµСЂРµР· РїРѕР±РёС‚РѕРІС‹Рµ РѕРїРµСЂР°С‚РѕСЂС‹
 public static boolean booleanExpression(boolean a, boolean b, boolean c, boolean d) {
     return ((a ^ b) & (c ^ d)) | ((a ^ c) & (d ^ b));
 }
 
-//чужое
+//С‡СѓР¶РѕРµ
 public static boolean booleanExpression(boolean a, boolean b, boolean c, boolean d) {
     return (a | b | c | d) && !(a & b & c & d) && !(a ^ b ^ c ^ d);
 }
